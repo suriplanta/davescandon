@@ -152,14 +152,16 @@
 /****/
 body,
 html {
-  overflow: hidden;
-  height: 100%;
   font-family: "Merriweather", serif;
   color: #4A4A4A; }
-  @media screen and (max-width: 991px) {
+  @media screen and (min-width: 991px) {
     body,
     html {
-      overflow: auto; } }
+      overflow: hidden;
+      height: 100%; }
+      body.post-layout,
+      html.post-layout {
+        overflow: auto !important; } }
   body.post-layout,
   html.post-layout {
     overflow: auto !important; }

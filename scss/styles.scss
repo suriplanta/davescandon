@@ -7,13 +7,16 @@
 
 body,
 html {
-  overflow: hidden;
-  height: 100%;
   font-family: $merriweather;
   color: $tundora;
 
-  @media screen and (max-width: $md) {
-    overflow: auto;
+  @media screen and (min-width: $md) {
+    overflow: hidden;
+    height: 100%;
+    
+    &.post-layout {
+      overflow: auto !important;
+    }
   }
 
   &.post-layout {
