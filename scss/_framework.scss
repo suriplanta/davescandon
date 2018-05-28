@@ -1,0 +1,206 @@
+// COLOR
+
+.bg-white {
+  background-color: $white;
+  color: $tundora;
+}
+
+.bg-gallery {
+  background-color: $gallery;
+  color: $tundora;
+}
+
+.bg-black {
+  background-color: $black;
+  color: $gallery;
+}
+
+.bg-jungle-mist {
+  background-color: $jungle-mist;
+  color: $thunder;
+}
+
+.bg-thunder {
+  background-color: $thunder;
+  color: $dust-gray;
+}
+
+.bg-dust-gray {
+  background-color: $dust-gray;
+  color: $thunder;
+}
+
+.bg-tundora {
+  background-color: $tundora;
+  color: $gallery;
+}
+
+//
+
+.white {
+  color: $white;
+}
+
+.gallery {
+  color: $gallery;
+}
+
+.black {
+  color: $black;
+}
+
+.jungle-mist {
+  color: $jungle-mist;
+}
+
+.thunder {
+  color: $thunder;
+}
+
+.dust-gray {
+  color: $dust-gray;
+}
+
+.tundora {
+  color: $tundora;
+}
+
+// FW
+
+//Basic framework styles
+
+//Transform
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.initial {
+  text-transform: initial;
+}
+
+//Line height
+
+@for $i from 0 through 5 {
+  .line-#{$i} {
+    line-height: #{$i};
+  }
+}
+
+//Text decoration
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.overline {
+  text-decoration: overline;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+//Font weight 
+
+.bold {
+  font-weight: bolder;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+//Hide blocks
+
+.xs-hidden {
+  @media screen and (max-width: $xs) {
+    display: none;
+  }
+}
+
+.sm-hidden {
+  @media screen and (max-width: $sm) {
+    display: none;
+  }
+}
+
+.md-hidden {
+  @media screen and (max-width: $md) {
+    display: none;
+  }
+}
+
+.lg-hidden {
+  @media screen and (max-width: $lg) {
+    display: none;
+  }
+}
+
+//Show blocks
+
+.xs-visible {
+  @media screen and (min-width: $xs) {
+    display: none;
+  }
+}
+
+.sm-visible {
+  @media screen and (min-width: $sm) {
+    display: none;
+  }
+}
+
+.md-visible {
+  @media screen and (min-width: $md) {
+    display: none;
+  }
+}
+
+.lg-visible {
+  @media screen and (min-width: $lg) {
+    display: none;
+  }
+}
+
+// Text ellipsis
+
+@mixin ellipsis() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-ellipsis {
+  @include ellipsis();
+}
+
+// Display
+
+.no-display {
+  display: none;
+}
+
+.block-display {
+  display: block;
+}
+
+.inline-block-display {
+  display: inline-block;
+}
+
+.inline-display {
+  display: inline;
+}
