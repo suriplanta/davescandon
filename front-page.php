@@ -96,11 +96,17 @@
     <div class="half-block image-grid">
       <?php
       // the query
-      $the_query = new WP_Query(array("category_name" => "digital-marketing", 'posts_per_page' => 8)); ?>
+      $the_query = new WP_Query(array("category_name" => "digital-marketing", 'posts_per_page' => 8));
+      $count = $the_query->post_count;
+      $gridcount = "";
+      if($count >= 1 && $count <= 6) {
+        $gridcount = "-".$count;
+      }
+      ?>
       <?php if ( $the_query->have_posts() ) : ?>
       <!-- the loop -->
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-      <div class="grid-block">
+      <div class="grid-block<?php echo $gridcount; ?>">
         <?php the_post_thumbnail('home-teaser'); ?>
         <div class="grid-description">
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -111,7 +117,7 @@
       <!-- pagination here -->
       <?php wp_reset_postdata(); ?>
       <?php else : ?>
-      <div class="post-placeholder">
+      <div class="post-placeholder count-<?php echo $count; ?>">
         <img src="https://source.unsplash.com/1600x900/?digital" alt="Marketing">
       </div>
       <?php endif; ?>
@@ -141,11 +147,17 @@
     <div class="half-block image-grid">
       <?php
       // the query
-      $the_query = new WP_Query(array("category_name" => "ux-ui", 'posts_per_page' => 8)); ?>
+      $the_query = new WP_Query(array("category_name" => "ux-ui", 'posts_per_page' => 8)); 
+      $count = $the_query->post_count;
+      $gridcount = "";
+      if($count >= 1 && $count <= 6) {
+        $gridcount = "-".$count;
+      }
+      ?>
       <?php if ( $the_query->have_posts() ) : ?>
       <!-- the loop -->
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-      <div class="grid-block">
+      <div class="grid-block<?php echo $gridcount; ?>">
         <?php the_post_thumbnail('home-teaser'); ?>
         <div class="grid-description">
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -156,7 +168,7 @@
       <!-- pagination here -->
       <?php wp_reset_postdata(); ?>
       <?php else : ?>
-      <div class="post-placeholder">
+      <div class="post-placeholder count-<?php echo $count; ?>">
         <img src="https://source.unsplash.com/1600x900/?website" alt="Marketing">
       </div>
       <?php endif; ?>
@@ -186,11 +198,17 @@
     <div class="half-block image-grid">
       <?php
       // the query
-      $the_query = new WP_Query(array("category_name" => "frontend", 'posts_per_page' => 8)); ?>
+      $the_query = new WP_Query(array("category_name" => "frontend", 'posts_per_page' => 8)); 
+      $count = $the_query->post_count;
+      $gridcount = "";
+      if($count >= 1 && $count <= 6) {
+        $gridcount = "-".$count;
+      }
+      ?>
       <?php if ( $the_query->have_posts() ) : ?>
       <!-- the loop -->
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-      <div class="grid-block">
+      <div class="grid-block<?php echo $gridcount; ?>">
         <?php the_post_thumbnail('home-teaser'); ?>
         <div class="grid-description">
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -201,7 +219,7 @@
       <!-- pagination here -->
       <?php wp_reset_postdata(); ?>
       <?php else : ?>
-      <div class="post-placeholder">
+      <div class="post-placeholder count-<?php echo $count; ?>">
         <img src="https://source.unsplash.com/1600x900/?code" alt="Marketing">
       </div>
       <?php endif; ?>

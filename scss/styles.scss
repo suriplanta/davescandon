@@ -326,6 +326,56 @@ a.sm-icon {
       width: 50%;
     }
   }
+  
+  .grid-block-1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .grid-block-2 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .grid-block-3 {
+    width: 33.3%;
+    height: 100%;
+    position: relative;
+
+    @media screen and (max-width: $md) {
+      width: 100%;
+      height: 50%;
+    }
+  } 
+  
+  .grid-block-4 {
+    width: 50%;
+    height: 50%;
+    position: relative;
+  } 
+  
+  .grid-block-5 {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    
+    @media screen and (max-width: $md) {
+      width: 100%;
+      height: 50%;
+    }
+  }
+  
+  .grid-block-6 {
+    width: 33.3%;
+    height: 50%;
+    position: relative;
+    
+    @media screen and (max-width: $md) {
+      width: 50%;
+    }
+  }
 
   img {
     display: block;
@@ -849,7 +899,7 @@ textarea.form-control {
   font-size: size(18);
   
   h2, h3, h4, h5 {
-    margin-top: size(35);
+    margin: size(50) 0 size(35) 0;
   }
   
   p:first-of-type {
@@ -857,6 +907,10 @@ textarea.form-control {
     font-size: size(20);
     font-weight: bold;
     color: $tundora;
+  }
+  
+  p {
+    margin-bottom: size(32);
   }
 }
 
