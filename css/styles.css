@@ -800,6 +800,20 @@ textarea.form-control {
     color: #4A4A4A; }
   .post-content p {
     margin-bottom: 2rem; }
+  .post-content blockquote {
+    font-size: 1.125rem;
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    color: #9B9B9B;
+    padding-left: 1.875rem;
+    border-left: 0.25rem solid #4A4A4A;
+    font-weight: 200; }
+    .post-content blockquote p, .post-content blockquote p:first-of-type {
+      font-size: 1.125rem;
+      font-family: "Merriweather", serif;
+      font-style: italic;
+      color: #9B9B9B;
+      font-weight: 200; }
 
 .post-comments {
   margin: 3.125rem 0; }

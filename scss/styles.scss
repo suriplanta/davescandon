@@ -912,6 +912,24 @@ textarea.form-control {
   p {
     margin-bottom: size(32);
   }
+  
+  blockquote {
+    font-size: size(18);
+    font-family: $merriweather;
+    font-style: italic;
+    color: $dust-gray;
+    padding-left: size(30);
+    border-left: size(4) solid $tundora;
+    font-weight: 200;
+    
+    p, p:first-of-type {
+      font-size: size(18);
+      font-family: $merriweather;
+      font-style: italic;
+      color: $dust-gray;
+      font-weight: 200;
+    }
+  }
 }
 
 .post-comments {

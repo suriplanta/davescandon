@@ -20,9 +20,6 @@
             <div class="post-teaser-date">
               <p><?php the_time('F j, Y'); ?></p>
             </div>
-            <div class="post-teaser-excerpt">
-              <p><?php echo get_the_excerpt(); ?></p>
-            </div>
           </div>
         </div>
       </div>
